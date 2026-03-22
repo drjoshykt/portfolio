@@ -355,6 +355,13 @@ section {
     opacity: 0.5;
 }
 
+.profile-pic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+}
+
 .floating-badge {
     position: absolute;
     background: var(--card-bg);
@@ -787,100 +794,184 @@ footer p {
 
 /* Responsive Design */
 @media screen and (max-width: 968px) {
+    .container {
+        width: 95%;
+    }
+    .hero {
+        padding-top: 120px;
+    }
     .hero-container {
         grid-template-columns: 1fr;
         text-align: center;
         gap: 60px;
     }
-    
     .hero-btns {
         justify-content: center;
     }
-    
     .hero-desc {
         margin: 0 auto 40px;
     }
-    
     .about-content {
         grid-template-columns: 1fr;
     }
-    
     .pub-work-container {
         grid-template-columns: 1fr;
     }
-    
     .contact-container {
         grid-template-columns: 1fr;
     }
-    
     .timeline::after {
         left: 31px;
     }
-    
     .timeline-item {
         width: 100%;
         padding-left: 80px;
         padding-right: 0;
     }
-    
     .timeline-item:nth-child(even) {
         left: 0;
     }
-    
     .timeline-dot {
         left: 21px;
     }
-    
     .timeline-item:nth-child(even) .timeline-dot {
         left: 21px;
     }
-    
     .hero-title {
         font-size: 3.5rem;
+    }
+    section {
+        padding: 80px 0;
     }
 }
 
 @media screen and (max-width: 768px) {
+    section {
+        padding: 60px 0;
+    }
     .hamburger {
         display: block;
     }
-    
     .hamburger.active .bar:nth-child(2) {
         opacity: 0;
     }
-    
     .hamburger.active .bar:nth-child(1) {
         transform: translateY(8px) rotate(45deg);
     }
-    
     .hamburger.active .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
     }
-    
     .nav-menu {
         position: fixed;
         left: -100%;
         top: 70px;
         flex-direction: column;
-        background: rgba(255, 255, 255, 0.95);
+        background: rgba(255, 255, 255, 0.98);
         backdrop-filter: blur(10px);
         width: 100%;
         text-align: center;
         transition: 0.3s;
-        box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.05);
         padding: 20px 0;
         border-bottom: 1px solid var(--card-border);
     }
-    
     .nav-menu.active {
         left: 0;
     }
-    
     .nav-item {
         margin: 15px 0;
     }
-    
     .stats-grid {
         grid-template-columns: 1fr;
+    }
+    .experience-grid {
+        grid-template-columns: 1fr;
+    }
+    .visual-card {
+        width: 300px;
+        height: 380px;
+    }
+    .photo-placeholder {
+        width: 290px;
+        height: 370px;
+    }
+    .initials {
+        font-size: 6rem;
+    }
+    .section-title {
+        font-size: 2.2rem;
+    }
+    .floating-badge {
+        padding: 10px 15px;
+        font-size: 0.95rem;
+    }
+    .badge-1 {
+        left: -20px;
+    }
+    .badge-2 {
+        right: -20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        width: 95%;
+    }
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+    .hero-desc {
+        font-size: 0.95rem;
+    }
+    .hero-btns {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .btn {
+        width: 100%;
+    }
+    .personal-info {
+        grid-template-columns: 1fr;
+    }
+    .timeline-item {
+        padding-left: 60px;
+    }
+    .timeline-content {
+        padding: 20px;
+    }
+    .timeline::after {
+        left: 17px;
+    }
+    .timeline-dot, .timeline-item:nth-child(even) .timeline-dot {
+        left: 7px;
+    }
+    .visual-card {
+        width: 240px;
+        height: 310px;
+    }
+    .photo-placeholder {
+        width: 230px;
+        height: 300px;
+    }
+    .initials {
+        font-size: 5rem;
+    }
+    .col-title {
+        font-size: 1.2rem;
+    }
+    .contact-item {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+        align-items: center;
+    }
+    .stat-card {
+        padding: 20px 10px;
+    }
+    .stat-num {
+        font-size: 2.5rem;
     }
 }
